@@ -126,12 +126,14 @@ article {
   font-weight: bold;
   transition: color 0.2s, background-color 0.2s;
 }
-.normal,
+.normal {
+  display: none;
+}
+
 .hard {
   display: none;
 }
-.difficult:hover {
-}
+
 .easy:hover {
   color: rgb(255, 255, 255);
   background: linear-gradient(
