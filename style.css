@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN ELEMENTS */
+body {
+  display: flex;
+  background: linear-gradient(
+    to left bottom,
+    rgb(95, 158, 240),
+    rgb(27, 46, 190)
+  );
+  color: #333;
+  font-weight: bold;
+  font-family: sans-serif;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+header {
+  background-color: rgba(255, 255, 255, 0.169);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*HEADER */
+
+.tittle {
+  text-transform: uppercase;
+  font-size: 80px;
+}
+
+/* TICTACTOE FIELD */
+.field {
+  align-self: center;
+  background-color: #333;
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px;
+  gap: 5px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 10px 5px 30px rgba(66, 66, 66, 0.568);
+}
+
+/* EVERY GRID */
+.grid {
+  background-color: rgb(255, 255, 255);
+}
+.grid0 {
+  border-radius: 10px 0 0 0;
+}
+.grid2 {
+  border-radius: 0 10px 0 0;
+}
+.grid6 {
+  border-radius: 0 0 0 10px;
+}
+.grid8 {
+  border-radius: 0 0 10px 0;
+}
+/* BUTTONS STYLE */
+.btn {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 35px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: #333;
+  transition: color 0.3s, background-color 0.3s;
+  box-shadow: 10px 5px 30px rgba(66, 66, 66, 0.568);
+}
+.btn:hover {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+}
+.btn:active {
+  transition: color 0s;
+  color: rgb(6, 119, 211);
+}
+
+/* BUTTONS FOR SELECTING GAME MODE */
+.player-field {
+  flex-direction: row;
+  display: flex;
+  align-self: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  flex: 0 1 auto;
+}
+
+/* STOP BUTTON */
+.btn-stop {
+  display: none;
+}
+/* RESET BUTTON */
+.btn-reset {
+  display: none;
+}
+
+/* BUTTONS FOR SELECTING DIFFICULT*/
+.difficult-field {
+  display: none;
+  align-self: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  flex: 0 1 auto;
+}
+.difficult {
+  font-size: 15px;
+  padding: 17px 35px;
+  font-weight: bold;
+  transition: color 0.2s, background-color 0.2s;
+}
+.difficult:hover {
+}
+.easy:hover {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to left bottom,
+    rgb(124, 242, 146),
+    rgb(53, 174, 6)
+  );
+}
+
+.normal:hover {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to left bottom,
+    rgb(250, 242, 84),
+    rgb(251, 194, 6)
+  );
+}
+.hard:hover {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to left bottom,
+    rgb(241, 69, 66),
+    rgb(221, 33, 33)
+  );
+}
+.difficult:active {
+  transition: color 0s;
+  color: #333;
+}
+
+/* BUTTONS FOR SELECTING SIDE */
+.side-field {
+  display: none;
+  align-self: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+.side {
+  font-size: 15px;
+  padding: 17px 35px;
+  font-weight: bold;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.zeros:hover {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to left bottom,
+    rgb(241, 69, 66),
+    rgb(221, 33, 33)
+  );
+}
+
+.crosses:hover {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to left bottom,
+    rgb(82, 130, 254),
+    rgb(8, 40, 242)
+  );
+}
+
+.side:active {
+  transition: color 0s;
+  color: #333;
+}
+
+/* BACK-BUTTONS */
+.back {
+  width: 50px;
+  padding: inherit;
+  background: none;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+.back:hover {
+  background-color: #333;
+}
