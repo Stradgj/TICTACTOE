@@ -133,7 +133,7 @@ function gameStart(bot = false) {
   allGrids.forEach((el) => el.addEventListener("click", action));
   //Bot make move
   if (bot === true) {
-    botMakeMovInterval = setInterval(botMove, 550, allGrids, difficult);
+    botMakeMovInterval = setInterval(botMove, 0, allGrids, difficult);
   }
 }
 //bot logic
