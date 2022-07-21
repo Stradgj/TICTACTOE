@@ -220,7 +220,7 @@ function moveBreaker() {
 }
 
 //Set tweaks to default
-function gameReset() {
+function gameReset(newGame = true) {
   currentPlayer = 0;
   movesCounter = 0;
   player1Grids = [];
@@ -230,8 +230,10 @@ function gameReset() {
   allGrids.forEach((el) => (el.innerHTML = ""));
   resetButton.style.display = "none";
   moveBreaker();
-  botMakeMovInterval = setInterval(botMove, 550, allGrids, difficult);
-  gameStart(side ? true : false);
+  clearInterval(botMakeMovInterval);
+  if (newGame) {
+    gameStart(side === 0 || side === 1 ? true : false);
+  }
 }
 
 //Changes for completed game
@@ -239,7 +241,6 @@ function completedGame() {
   resetButton.style.display = "block";
   allGrids.forEach((el) => el.removeEventListener("click", action));
   allGrids.forEach((grid) => (grid.style.cursor = "default"));
-  clearInterval(botMakeMovInterval);
 }
 
 //function that display default display
@@ -257,7 +258,7 @@ function startField() {
 
 //function, that stops the game
 function stop() {
-  gameReset();
+  gameReset(false);
   startField();
   allGrids.forEach((grid) => (grid.style.cursor = "default"));
   allGrids.forEach((el) => el.removeEventListener("click", action));
